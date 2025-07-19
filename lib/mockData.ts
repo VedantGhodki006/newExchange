@@ -35,7 +35,7 @@ export const initialStocks: Stock[] = [
   },
   {
     symbol: 'TA',
-    name: 'Tesla Inc.',
+    name: 'TA Inc.',
     price: 890.5,
     previousPrice: 885.3,
     percentageChange: 0.59,

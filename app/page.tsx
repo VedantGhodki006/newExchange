@@ -1,9 +1,15 @@
+'use client'
 
+import { useState } from "react";
+import { AuthModal } from "@/components/authModal";
 
-export default function Home(){
+export default function Home() {
+  const [isOpen, setIsOpen] = useState(true);
+
   return (
     <>
-    <div>hello</div>
+      <AuthModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
+      <div>reexchange website</div>
     </>
-  )
+  );
 }
