@@ -89,7 +89,6 @@ export async function loginUser(data: LoginInput) {
 }
 
 export function logoutUser() {
-  // You can do more here if using server-managed sessions (like Redis/DB)
   return {
     message: 'User logged out successfully',
   };
