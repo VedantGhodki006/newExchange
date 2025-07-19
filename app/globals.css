@@ -1,26 +1,88 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.layout {
+  height: 100vh;
+  background-image: linear-gradient(to bottom, white, #cffafe, white);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.navbar-root {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0px;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 800px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.link-items {
+  font-size: 20px;
+  text-decoration: none;
+  color: #4b5563;
+}
+
+.link-items:hover {
+  color: black;
+  transition: color 0.2s ease-out;
+}
+
+.btn {
+  all: unset;
+  font-size: 16px;
+  padding: 8px 12px;
+  background-color: #06b6d4;
+  border-radius: 10px;
+  color: #fff;
+  text-shadow: 0px 0.5px 1px rgba(0, 0 , 0, 0.25);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.hero-root {
+  padding: 30px 0px;
+}
+
+.badge {
+  font-size: 12px;
+  max-width: 300px;
+  border-radius: 50px;
+  background-color: #f3f4f6;
+  padding: 10px;
+  width: fit-content;
+  margin: 0.5 auto;
+  border: 1px solid #e5e7eb;
+}
+
+.badge:hover {
+  background-color: #d1d5db;
+  transition: backround-color 0.2s ease-out ;
+}
+
+.hero-title {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: -0.4px;
+  line-height: 1.1;
+  margin-top: 30px;
 }
