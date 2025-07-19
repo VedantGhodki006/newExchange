@@ -1,88 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 20 14.3% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+    --primary: 24 9.8% 10%;
+    --primary-foreground: 60 9.1% 97.8%;
+    --secondary: 60 4.8% 95.9%;
+    --secondary-foreground: 24 9.8% 10%;
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+    --accent: 60 4.8% 95.9%;
+    --accent-foreground: 24 9.8% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 20 14.3% 4.1%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem
+  }
+  .dark {
+    --background: 20 14.3% 4.1%;
+    --foreground: 60 9.1% 97.8%;
+    --card: 20 14.3% 4.1%;
+    --card-foreground: 60 9.1% 97.8%;
+    --popover: 20 14.3% 4.1%;
+    --popover-foreground: 60 9.1% 97.8%;
+    --primary: 60 9.1% 97.8%;
+    --primary-foreground: 24 9.8% 10%;
+    --secondary: 12 6.5% 15.1%;
+    --secondary-foreground: 60 9.1% 97.8%;
+    --muted: 12 6.5% 15.1%;
+    --muted-foreground: 24 5.4% 63.9%;
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 60 9.1% 97.8%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 12 6.5% 15.1%;
+    --input: 12 6.5% 15.1%;
+    --ring: 24 5.7% 82.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%
+  }
 }
 
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.layout {
-  height: 100vh;
-  background-image: linear-gradient(to bottom, white, #cffafe, white);
-}
-
-.navbar-root {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 25px 0px;
-}
-
-.logo {
-  font-size: 25px;
-  font-weight: 800px;
-}
-
-.links {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.link-items {
-  font-size: 20px;
-  text-decoration: none;
-  color: #4b5563;
-}
-
-.link-items:hover {
-  color: black;
-  transition: color 0.2s ease-out;
-}
-
-.btn {
-  all: unset;
-  font-size: 16px;
-  padding: 8px 12px;
-  background-color: #06b6d4;
-  border-radius: 10px;
-  color: #fff;
-  text-shadow: 0px 0.5px 1px rgba(0, 0 , 0, 0.25);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-}
-
-.hero-root {
-  padding: 30px 0px;
-}
-
-.badge {
-  font-size: 12px;
-  max-width: 300px;
-  border-radius: 50px;
-  background-color: #f3f4f6;
-  padding: 10px;
-  width: fit-content;
-  margin: 0.5 auto;
-  border: 1px solid #e5e7eb;
-}
-
-.badge:hover {
-  background-color: #d1d5db;
-  transition: backround-color 0.2s ease-out ;
-}
-
-.hero-title {
-  font-size: 40px;
-  font-weight: bold;
-  text-align: center;
-  letter-spacing: -0.4px;
-  line-height: 1.1;
-  margin-top: 30px;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
